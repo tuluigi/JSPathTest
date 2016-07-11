@@ -7,16 +7,44 @@
 //
 
 #import "AppDelegate.h"
+//#import <JSPatch/JSPatch.h>
 
+#import "NEJSPatch.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
+- (void)testJSPath{
+    [NEJSPatch startWithAppKey:@"f8463ac6cc6047cc9735940500ae7959" appVersion:nil];
+    [NEJSPatch sync];
+    /*
+    [JSPatch startWithAppKey:@"45242a40ae1fa8ec"];
+    
+    [JSPatch setupUserData:@{@"userid":@"10001",@"gender":@"1",@"systemVersion":@"iOS9.0"}];
+    [JSPatch sync];
+    [JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
+        switch (type) {
+            case JPCallbackTypeUpdate: {
+                NSLog(@"哈哈 updated %@ %@", data, error);
+                break;
+            }
+            case JPCallbackTypeRunScript: {
+                NSLog(@"哈哈 run script %@ %@", data, error);
+                break;
+            }
+            default:
+                break;
+        }
+    }];
+     */
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self testJSPath];
+   
+
     return YES;
 }
 

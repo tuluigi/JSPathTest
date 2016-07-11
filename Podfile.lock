@@ -1,0 +1,15 @@
+PODS:
+  - GTMBase64 (1.0.0)
+  - JSPatch (1.0):
+    - JSPatch/Core (= 1.0)
+  - JSPatch/Core (1.0)
+
+DEPENDENCIES:
+  - GTMBase64 (~> 1.0.0)
+  - JSPatch (~> 1.0)
+
+SPEC CHECKSUMS:
+  GTMBase64: 0da7372e95f5171f3f652db38cde6716f8eb5e24
+  JSPatch: c689ea4dde17441f2f4a95d40dfedb8900c20099
+
+COCOAPODS: 0.39.0
